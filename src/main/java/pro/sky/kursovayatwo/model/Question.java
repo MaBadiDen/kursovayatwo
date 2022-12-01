@@ -30,8 +30,7 @@ public class Question {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Question)) return false;
-        Question question1 = (Question) o;
+        if (!(o instanceof Question question1)) return false;
         return Objects.equals(getQuestion(), question1.getQuestion()) && Objects.equals(getAnswer(), question1.getAnswer());
     }
 
@@ -42,6 +41,6 @@ public class Question {
 
     @Override
     public String toString() {
-        return "Вопрос : " + question + " имеет ответ: " + answer;
+        return "Вопрос : <" + question + "> с ответом: <" + answer + ">";
     }
 }
